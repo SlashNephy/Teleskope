@@ -6,3 +6,7 @@ pluginManagement {
 }
 
 rootProject.name = "Teleskope"
+
+include(":modules:api")
+include(":modules:player-component")
+include(":modules:ui-components")
