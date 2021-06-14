@@ -8,7 +8,7 @@ I'm creating this application for my Compose Desktop learning. The goal is to po
 
 ![screenshot.png](https://i.imgur.com/gh60oaH.png)
 
-![screenshot.png](https://i.imgur.com/2Nm109U.png)
+![screenshot.png](https://i.imgur.com/QkFVMCg.png)
 
 ## TODO
 
