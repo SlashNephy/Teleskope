@@ -8,7 +8,7 @@ import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.client.request.get
 
-class EpgStationApiClient(private val baseUrl: String): DtvApiClient {
+class EpgStationApiClient(private val baseUrl: String) : DtvApiClient {
     private val client = HttpClient {
         install(JsonFeature) {
             serializer = KotlinxSerializer()
@@ -37,7 +37,7 @@ class EpgStationApiClient(private val baseUrl: String): DtvApiClient {
     override suspend fun getProgram(id: Long): ProgramInfo? {
         TODO("Not yet implemented")
     }
-    
+
     override fun close() {
         client.close()
     }

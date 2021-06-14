@@ -5,7 +5,7 @@ import blue.starry.teleskope.endpoints.EpgStationApiClient
 import blue.starry.teleskope.endpoints.MirakurunApiClient
 import kotlinx.serialization.Serializable
 
-sealed interface EndpointConfig<T: DtvApiClient> {
+sealed interface EndpointConfig<T : DtvApiClient> {
     val url: String
     fun createApiClient(): T
 }
@@ -14,7 +14,7 @@ sealed interface EndpointConfig<T: DtvApiClient> {
 data class MirakurunEndpointConfig(
     override val url: String,
     val headers: Map<String, String> = emptyMap()
-): EndpointConfig<MirakurunApiClient> {
+) : EndpointConfig<MirakurunApiClient> {
     override fun createApiClient(): MirakurunApiClient {
         return MirakurunApiClient(url)
     }
@@ -24,7 +24,7 @@ data class MirakurunEndpointConfig(
 data class EpgStationEndpointConfig(
     override val url: String,
     val headers: Map<String, String> = emptyMap()
-): EndpointConfig<EpgStationApiClient> {
+) : EndpointConfig<EpgStationApiClient> {
     override fun createApiClient(): EpgStationApiClient {
         return EpgStationApiClient(url)
     }

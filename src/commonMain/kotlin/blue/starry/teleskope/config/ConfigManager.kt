@@ -5,4 +5,4 @@ interface ConfigManager {
     fun save(config: Config)
 }
 
-internal expect object ConfigManagerImpl: ConfigManager
+internal expect object ConfigManagerImpl : ConfigManager

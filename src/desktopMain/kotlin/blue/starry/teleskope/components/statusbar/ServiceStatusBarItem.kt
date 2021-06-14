@@ -23,7 +23,7 @@ fun ServiceStatusBarItem(
 ) {
     var expanded by remember { mutableStateOf(false) }
     val selected = currentService?.name ?: if (isFetching) "(データ取得中...)" else "(サービスなし)"
-    
+
     Text(
         text = selected,
         textAlign = TextAlign.Start,
@@ -32,16 +32,18 @@ fun ServiceStatusBarItem(
             .border(BorderStroke(1.dp, Color.Black))
             .padding(horizontal = 20.dp)
     )
-    
+
     DropdownMenu(
         expanded = expanded,
         onDismissRequest = { expanded = false }
     ) {
         for (service in services) {
-            DropdownMenuItem(onClick = {
-                onSelect(service)
-                expanded = false
-            }) {
+            DropdownMenuItem(
+                onClick = {
+                    onSelect(service)
+                    expanded = false
+                }
+            ) {
                 Text(text = service.name)
             }
         }

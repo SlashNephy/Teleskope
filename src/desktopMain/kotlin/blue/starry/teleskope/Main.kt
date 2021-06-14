@@ -42,7 +42,7 @@ fun main(args: Array<String>) = application {
     // On change config.endpoints
     LaunchedEffect(config.endpoints) {
         logger.debug { "changed: config.endpoints" }
-        
+
         val endpoint = config.endpoints.mirakurun ?: config.endpoints.epgstation ?: return@LaunchedEffect
         client = endpoint.createApiClient()
 
@@ -51,7 +51,7 @@ fun main(args: Array<String>) = application {
         // programs = client?.getPrograms() ?: emptyList()
         isPerformingTask = false
     }
-    
+
     Window(
         state = state,
         alwaysOnTop = alwaysOnTop,

@@ -5,4 +5,4 @@ interface PluginManager {
     fun unload()
 }
 
-internal expect class PluginManagerImpl: PluginManager
+internal expect class PluginManagerImpl : PluginManager

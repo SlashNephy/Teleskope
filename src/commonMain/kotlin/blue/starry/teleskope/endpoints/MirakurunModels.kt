@@ -66,13 +66,13 @@ data class MirakurunProgram(
         val streamContent: Int,
         val componentType: Int
     )
-    
+
     @Serializable
     data class Audio(
         val samplingRate: Int,
         val componentType: Int
     )
-    
+
     @Serializable
     data class Genre(
         val lv1: Int,

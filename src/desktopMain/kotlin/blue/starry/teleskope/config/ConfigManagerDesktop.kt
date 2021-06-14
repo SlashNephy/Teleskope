@@ -9,20 +9,22 @@ import java.nio.file.Paths
 import kotlin.io.path.readText
 import kotlin.io.path.writeText
 
-internal actual object ConfigManagerImpl: ConfigManager {
+internal actual object ConfigManagerImpl : ConfigManager {
     private val configPath
         get() = Paths.get("config.yml")
     private val serializer
-        get() = Yaml(configuration = YamlConfiguration(
-            // ignore unknown key error
-            strictMode = false
-        ))
-    
+        get() = Yaml(
+            configuration = YamlConfiguration(
+                // ignore unknown key error
+                strictMode = false
+            )
+        )
+
     override fun load(): Config {
         if (Files.notExists(configPath)) {
             return Config()
         }
-        
+
         val yml = configPath.readText()
         return serializer.decodeFromString(yml)
     }

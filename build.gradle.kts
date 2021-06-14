@@ -38,18 +38,18 @@ kotlin {
                 implementation("io.ktor:ktor-client:1.6.0")
                 implementation("io.ktor:ktor-client-serialization:1.6.0")
                 implementation("io.ktor:ktor-client-logging:1.6.0")
-                
+
                 implementation("io.github.microutils:kotlin-logging:2.0.8")
             }
         }
-        
+
         named("desktopMain") {
             dependencies {
                 implementation(compose.desktop.currentOs)
-                
+
                 implementation("com.charleskorn.kaml:kaml:0.34.0")
                 implementation("io.ktor:ktor-client-cio:1.6.0")
-                
+
                 implementation("ch.qos.logback:logback-core:1.2.3")
                 implementation("ch.qos.logback:logback-classic:1.2.3")
                 implementation("org.fusesource.jansi:jansi:2.3.2")
@@ -61,8 +61,8 @@ kotlin {
             }
         }
     }
-    
-    sourceSets.all { 
+
+    sourceSets.all {
         languageSettings.useExperimentalAnnotation("kotlin.RequiresOptIn")
     }
 }
@@ -75,11 +75,29 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions.jvmTarget = "16"
 }
 
+ktlint {
+    verbose.set(true)
+    outputToConsole.set(true)
+    reporters {
+        reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.CHECKSTYLE)
+    }
+}
+
+buildtimetracker {
+    reporters {
+        register("summary") {
+            options["ordered"] = "true"
+            options["barstyle"] = "ascii"
+            options["shortenTaskNames"] = "false"
+        }
+    }
+}
+
 compose.desktop {
     application {
         mainClass = "blue.starry.teleskope.MainKt"
         javaHome = System.getenv("JDK_16")
-        
+
         nativeDistributions {
             targetFormats(TargetFormat.Exe, TargetFormat.Dmg, TargetFormat.Deb)
             packageName = "Teleskope"
@@ -87,22 +105,22 @@ compose.desktop {
             description = "Universal Mirakurun & EPGStation Desktop Client"
             copyright = "(c) 2021 starry.blue. All rights reserved."
             includeAllModules = true
-            
+
             windows {
                 dirChooser = true
                 perUserInstall = true
-                
+
                 menu = true
                 menuGroup = "Teleskope"
-                
+
                 // see https://wixtoolset.org/documentation/manual/v3/howtos/general/generate_guids.html
                 upgradeUuid = "6FAB797B-E8AE-4958-ACF0-E099A298C70A"
             }
-            
+
             macOS {
                 bundleID = "blue.starry.teleskope"
             }
-            
+
             linux {
                 menuGroup = "Teleskope"
             }
