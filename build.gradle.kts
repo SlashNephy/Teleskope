@@ -7,7 +7,7 @@ plugins {
     id("org.jetbrains.compose") version "0.5.0-build224"
 
     id("org.jlleitschuh.gradle.ktlint") version "10.1.0"
-    id("com.adarshr.test-logger") version "3.0.0"
+    id("com.adarshr.test-logger") version "3.2.0"
     id("net.rdrei.android.buildtimetracker") version "0.11.0"
 }
 
