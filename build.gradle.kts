@@ -52,7 +52,7 @@ kotlin {
 
                 implementation("ch.qos.logback:logback-core:1.2.11")
                 implementation("ch.qos.logback:logback-classic:1.2.3")
-                implementation("org.fusesource.jansi:jansi:2.3.2")
+                implementation("org.fusesource.jansi:jansi:2.4.0")
             }
         }
         named("desktopTest") {
