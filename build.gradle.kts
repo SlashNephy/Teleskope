@@ -51,7 +51,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-cio:1.6.0")
 
                 implementation("ch.qos.logback:logback-core:1.2.11")
-                implementation("ch.qos.logback:logback-classic:1.2.3")
+                implementation("ch.qos.logback:logback-classic:1.2.11")
                 implementation("org.fusesource.jansi:jansi:2.4.0")
             }
         }
