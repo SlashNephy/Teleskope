@@ -6,7 +6,7 @@ plugins {
     kotlin("plugin.serialization") version "1.5.10"
     id("org.jetbrains.compose") version "0.5.0-build224"
 
-    id("org.jlleitschuh.gradle.ktlint") version "10.2.1"
+    id("org.jlleitschuh.gradle.ktlint") version "10.3.0"
     id("com.adarshr.test-logger") version "3.2.0"
     id("net.rdrei.android.buildtimetracker") version "0.11.0"
 }
