@@ -47,7 +47,7 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.currentOs)
 
-                implementation("com.charleskorn.kaml:kaml:0.43.0")
+                implementation("com.charleskorn.kaml:kaml:0.44.0")
                 implementation("io.ktor:ktor-client-cio:1.6.8")
 
                 implementation("ch.qos.logback:logback-core:1.2.11")
