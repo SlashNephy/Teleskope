@@ -18,7 +18,7 @@ kotlin {
         }
         named("desktopMain") {
             dependencies {
-                api("uk.co.caprica:vlcj:4.7.2")
+                api("uk.co.caprica:vlcj:4.7.3")
             }
         }
     }
