@@ -35,7 +35,7 @@ kotlin {
                 api(project(":modules:player-component"))
                 api(project(":modules:ui-components"))
 
-                implementation("io.ktor:ktor-client:1.6.8")
+                implementation("io.ktor:ktor-client:2.0.2")
                 implementation("io.ktor:ktor-client-serialization:1.6.8")
                 implementation("io.ktor:ktor-client-logging:1.6.8")
 
