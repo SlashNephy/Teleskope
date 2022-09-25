@@ -9,7 +9,7 @@ kotlin {
     sourceSets {
         named("commonMain") {
             dependencies {
-                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
+                api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
             }
         }
     }
