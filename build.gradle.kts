@@ -35,9 +35,9 @@ kotlin {
                 api(project(":modules:player-component"))
                 api(project(":modules:ui-components"))
 
-                implementation("io.ktor:ktor-client:1.6.8")
-                implementation("io.ktor:ktor-client-serialization:1.6.8")
-                implementation("io.ktor:ktor-client-logging:1.6.8")
+                implementation("io.ktor:ktor-client:2.3.6")
+                implementation("io.ktor:ktor-client-serialization:2.3.6")
+                implementation("io.ktor:ktor-client-logging:2.3.6")
 
                 implementation("io.github.microutils:kotlin-logging:2.1.23")
             }
@@ -48,7 +48,7 @@ kotlin {
                 implementation(compose.desktop.currentOs)
 
                 implementation("com.charleskorn.kaml:kaml:0.48.0")
-                implementation("io.ktor:ktor-client-cio:1.6.8")
+                implementation("io.ktor:ktor-client-cio:2.3.6")
 
                 implementation("ch.qos.logback:logback-core:1.4.1")
                 implementation("ch.qos.logback:logback-classic:1.4.1")
